@@ -1,0 +1,14 @@
+{
+    "require": {
+        "silex/silex": "~2.0",
+        "twig/twig": "^1.29",
+        "symfony/twig-bridge": "^3.2",
+        "rpodwika/yaml-config-service-provider": "^1.0",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

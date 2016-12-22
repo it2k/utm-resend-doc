@@ -1,0 +1,23 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    <form method="post" action="/resendDoc" enctype="multipart/form-data">
+        <div>
+            <label for="ttn">Список TTN через запятую:</label>
+        </div>
+        <div>
+            <textarea id="ttn" name="ttn" rows="7" cols="55"></textarea>
+        </div>
+        <div>
+            <label for="utm">УТМ:</label>
+            <select id="utm" name="utm">
+                {% for utm in utmList %}
+                    <option value="{{ utm }}">{{ utm }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Запросить">
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    <h1>Результат запросов:</h1>
+    <div>
+        <ul>
+    {% for name, message in result %}
+        <li><label>{{ name }}: </label>{{ message }}</li>
+    {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <a href="/">Новый запрос</a>
+    </div>
+{% endblock%}
